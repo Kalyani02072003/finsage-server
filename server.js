@@ -100,7 +100,9 @@ app.get('/api/user-profile', verifyToken, async (req, res) => {
       res.status(500).json({ message: 'Server Error' });
   }
 });
-
+app.get("/",(req,res)=>{
+  res.status(200).json({message:"Hey working"})
+;})
 // This code should be added in the file where you define your routes (e.g., routes.js)
 // Example protected route
 app.get('/api/protected', verifyToken, (req, res) => {
